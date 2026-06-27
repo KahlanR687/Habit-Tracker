@@ -50,12 +50,21 @@ public class Habit
 
     /// <summary>
     ///     <para>
-    ///         Updates the current streak of the habit to the inputted new streak value.
+    ///         Updates the current streak of the habit by one.
     ///         If the new streak is greater than the current longest streak, the longest streak is also updated.
     ///     </para>
     /// </summary>
-    /// <param name="newStreak">The new streak that the habit has reached.</param>
-    public void updateStreak(int newStreak)
+    public void incrementStreak()
+    {
+        
+    }
+
+    /// <summary>
+    ///     <para>
+    ///         Resets the current streak of the habit to zero.
+    ///     </para>
+    /// </summary>
+    public void resetStreak()
     {
         
     }

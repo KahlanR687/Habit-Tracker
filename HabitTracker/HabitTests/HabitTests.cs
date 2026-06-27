@@ -5,9 +5,14 @@ using Habit;
 public sealed class HabitTests
 {
     [TestMethod]
-    public void UpdateStreak_TestUpdateToZero_ReturnsZero()
+    public void IncrementStreak_TestIncrementFromZero_ReturnsOne()
     {
         Habit h = new Habit();
         
+        Assert.AreEqual(0, h.getCurrentStreak());
+        
+        h.incrementStreak();
+        
+        Assert.AreEqual(1, h.getCurrentStreak());
     }
 }
