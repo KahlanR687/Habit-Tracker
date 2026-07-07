@@ -16,14 +16,7 @@ public class Habit
     ///     </para>
     /// </summary>
     private string _name;
-    
-    /// <summary>
-    ///     <para>
-    ///         A private string variable that represents the description of the habit.
-    ///     </para>
-    /// </summary>
-    private string _description;
-    
+
     /// <summary>
     ///     <para>
     ///         A private int variable that represents the current streak of the habit.
@@ -37,15 +30,32 @@ public class Habit
     ///     </para>
     /// </summary>
     private int _longestStreak;
+
+    /// <summary>
+    ///     <para>
+    ///         A private boolean variable that represents if a habit was completed that day.
+    ///     </para>
+    /// </summary>
+    private bool _completedToday;
+
+    /// <summary>
+    ///     <para>
+    ///         A private Dictionary that keeps track of the history of the habit.
+    ///     </para>
+    /// </summary>
+    private Dictionary<DateTime, bool> _completionHistory;
     
     /// <summary>
     ///     <para>
     ///         A constructor that initializes a new instance of the Habit class.
     ///     </para>
     /// </summary>
-    public Habit()
+    public Habit(string name)
     {
-        
+        _name = name;
+        _currentStreak = 0;
+        _longestStreak = 0;
+        _completionHistory = new Dictionary<DateTime, bool>();
     }
 
     /// <summary>
@@ -54,9 +64,14 @@ public class Habit
     ///         If the new streak is greater than the current longest streak, the longest streak is also updated.
     ///     </para>
     /// </summary>
-    public void incrementStreak()
+    public void IncrementStreak()
     {
-        
+        _currentStreak++;
+
+        if (_currentStreak > _longestStreak)
+        {
+            _longestStreak = _currentStreak;
+        }
     }
 
     /// <summary>
@@ -64,9 +79,9 @@ public class Habit
     ///         Resets the current streak of the habit to zero.
     ///     </para>
     /// </summary>
-    public void resetStreak()
+    public void ResetStreak()
     {
-        
+        _currentStreak = 0;
     }
 
     /// <summary>
@@ -75,9 +90,9 @@ public class Habit
     ///     </para>
     /// </summary>
     /// <returns>An integer value representing the current streak of the habit.</returns>
-    public int getCurrentStreak()
+    public int GetCurrentStreak()
     {
-        return 0;
+        return _currentStreak;
     }
 
     /// <summary>
@@ -86,9 +101,33 @@ public class Habit
     ///     </para>
     /// </summary>
     /// <returns>An integer value representing the longest streak of the habit.</returns>
-    public int getLongestStreak()
+    public int GetLongestStreak()
     {
-        return 0;
+        return _longestStreak;
+    }
+
+    /// <summary>
+    ///     <para>
+    ///         Retrieves the name of the habit.
+    ///     </para>
+    /// </summary>
+    /// <returns>A string value representing the name of the habit</returns>
+    public string GetName()
+    {
+        return _name;
+    }
+
+    /// <summary>
+    ///     <para>
+    ///         Marks a habit as complete for that day
+    ///     </para>
+    /// </summary>
+    public void MarkComplete()
+    {
+        IncrementStreak();
+        
+        _completedToday = true;
+        _completionHistory.Add(DateTime.Now, true);
     }
     
 }
