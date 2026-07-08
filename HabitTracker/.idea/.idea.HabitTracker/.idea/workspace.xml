@@ -9,7 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9bfd70de-70e5-48ea-88c3-de490ed3f92c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Habit/Habit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Habit/Habit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabitTests/HabitTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/HabitTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +55,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.HabitTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -67,7 +73,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.HabitTests">
     <configuration name="HabitTests" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -97,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782523781945</updated>
-      <workItem from="1782523782953" duration="3611000" />
+      <workItem from="1782523782953" duration="6061000" />
     </task>
     <task id="LOCAL-00001" summary="Create new HabitTracker solution, Create Habit Class and add basic methods and comments to Habit.cs">
       <option name="closed" value="true" />
@@ -123,11 +129,34 @@
       <option name="project" value="LOCAL" />
       <updated>1782525175108</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="program methods in Habit.cs and add new tests for IncrementStreak in HabitTests.cs">
+      <option name="closed" value="true" />
+      <created>1783388845598</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783388845598</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="251" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 99% 2/135" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
@@ -136,7 +165,8 @@
     <MESSAGE value="Create new HabitTracker solution, Create Habit Class and add basic methods and comments to Habit.cs" />
     <MESSAGE value="Create HabitTests.cs" />
     <MESSAGE value="change updateStreak to incrementStreak and resetStreak. Add one test to HabitTests.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="change updateStreak to incrementStreak and resetStreak. Add one test to HabitTests.cs" />
+    <MESSAGE value="program methods in Habit.cs and add new tests for IncrementStreak in HabitTests.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="program methods in Habit.cs and add new tests for IncrementStreak in HabitTests.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

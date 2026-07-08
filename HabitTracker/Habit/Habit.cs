@@ -33,17 +33,17 @@ public class Habit
 
     /// <summary>
     ///     <para>
-    ///         A private boolean variable that represents if a habit was completed that day.
+    ///         A public boolean variable that represents if a habit was completed that day.
     ///     </para>
     /// </summary>
-    private bool _completedToday;
+    public bool CompletedToday { get; private set; }
 
     /// <summary>
     ///     <para>
-    ///         A private Dictionary that keeps track of the history of the habit.
+    ///         A public Dictionary that keeps track of the history of the habit.
     ///     </para>
     /// </summary>
-    private Dictionary<DateTime, bool> _completionHistory;
+    public List<string> CompletionHistory;
     
     /// <summary>
     ///     <para>
@@ -55,7 +55,7 @@ public class Habit
         _name = name;
         _currentStreak = 0;
         _longestStreak = 0;
-        _completionHistory = new Dictionary<DateTime, bool>();
+        CompletionHistory = new List<string>();
     }
 
     /// <summary>
@@ -119,15 +119,20 @@ public class Habit
 
     /// <summary>
     ///     <para>
-    ///         Marks a habit as complete for that day
+    ///         Marks a habit as complete for that day. Prevents habit from being marked complete multiple times per day.
     ///     </para>
     /// </summary>
     public void MarkComplete()
     {
+        if (CompletedToday)
+        {
+            return;
+        }
+        
         IncrementStreak();
         
-        _completedToday = true;
-        _completionHistory.Add(DateTime.Now, true);
+        CompletedToday = true;
+        CompletionHistory.Add(DateTime.Today.ToString("yyyy-MM-dd"));
     }
     
 }
