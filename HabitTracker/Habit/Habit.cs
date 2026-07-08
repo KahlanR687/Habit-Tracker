@@ -29,7 +29,7 @@ public class Habit
     ///         An int Property that represents the longest streak of the habit.
     ///     </para>
     /// </summary>
-    public int LongestStreak;
+    public int LongestStreak  { get; private set; }
 
     /// <summary>
     ///     <para>
