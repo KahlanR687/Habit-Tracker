@@ -195,8 +195,8 @@ public sealed class HabitTests
         Assert.AreEqual(1, h.CurrentStreak);
         Assert.AreEqual(1, h.LongestStreak);
         Assert.IsTrue(h.CompletedToday);
-        Assert.Contains("2026-07-07", h.CompletionHistory);
-        Assert.DoesNotContain("2026-07-05", h.CompletionHistory);
+        Assert.Contains(DateTime.Today, h.CompletionHistory);
+        Assert.DoesNotContain(DateTime.Now, h.CompletionHistory);
     }
 
     [TestMethod]

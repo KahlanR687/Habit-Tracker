@@ -43,7 +43,7 @@ public class Habit
     ///         A public Dictionary that keeps track of the history of the habit.
     ///     </para>
     /// </summary>
-    public List<string> CompletionHistory;
+    public readonly List<DateTime> CompletionHistory;
     
     /// <summary>
     ///     <para>
@@ -55,7 +55,7 @@ public class Habit
         Name = name;
         CurrentStreak = 0;
         LongestStreak = 0;
-        CompletionHistory = new List<string>();
+        CompletionHistory = new List<DateTime>();
     }
 
     /// <summary>
@@ -99,7 +99,7 @@ public class Habit
         IncrementStreak();
         
         CompletedToday = true;
-        CompletionHistory.Add(DateTime.Today.ToString("yyyy-MM-dd"));
+        CompletionHistory.Add(DateTime.Today);
     }
     
 }
