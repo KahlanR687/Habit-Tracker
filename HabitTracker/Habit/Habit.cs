@@ -12,24 +12,24 @@ public class Habit
 
     /// <summary>
     ///     <para>
-    ///         A private string variable that represents the name of the habit.
+    ///         A string Property that represents the name of the habit.
     ///     </para>
     /// </summary>
-    private string _name;
+    public string Name { get; private set; }
 
     /// <summary>
     ///     <para>
-    ///         A private int variable that represents the current streak of the habit.
+    ///         An int Property that represents the current streak of the habit.
     ///     </para>
     /// </summary>
-    private int _currentStreak;
+    public int CurrentStreak { get; private set; }
     
     /// <summary>
     ///     <para>
-    ///         A private int variable that represents the longest streak of the habit.
+    ///         An int Property that represents the longest streak of the habit.
     ///     </para>
     /// </summary>
-    private int _longestStreak;
+    public int LongestStreak;
 
     /// <summary>
     ///     <para>
@@ -52,9 +52,9 @@ public class Habit
     /// </summary>
     public Habit(string name)
     {
-        _name = name;
-        _currentStreak = 0;
-        _longestStreak = 0;
+        Name = name;
+        CurrentStreak = 0;
+        LongestStreak = 0;
         CompletionHistory = new List<string>();
     }
 
@@ -66,11 +66,11 @@ public class Habit
     /// </summary>
     public void IncrementStreak()
     {
-        _currentStreak++;
+        CurrentStreak++;
 
-        if (_currentStreak > _longestStreak)
+        if (CurrentStreak > LongestStreak)
         {
-            _longestStreak = _currentStreak;
+            LongestStreak = CurrentStreak;
         }
     }
 
@@ -81,40 +81,7 @@ public class Habit
     /// </summary>
     public void ResetStreak()
     {
-        _currentStreak = 0;
-    }
-
-    /// <summary>
-    ///     <para>
-    ///         Retrieves the current streak of the habit.
-    ///     </para>
-    /// </summary>
-    /// <returns>An integer value representing the current streak of the habit.</returns>
-    public int GetCurrentStreak()
-    {
-        return _currentStreak;
-    }
-
-    /// <summary>
-    ///     <para>
-    ///         Retrieves the longest streak of the habit.
-    ///     </para>
-    /// </summary>
-    /// <returns>An integer value representing the longest streak of the habit.</returns>
-    public int GetLongestStreak()
-    {
-        return _longestStreak;
-    }
-
-    /// <summary>
-    ///     <para>
-    ///         Retrieves the name of the habit.
-    ///     </para>
-    /// </summary>
-    /// <returns>A string value representing the name of the habit</returns>
-    public string GetName()
-    {
-        return _name;
+        CurrentStreak = 0;
     }
 
     /// <summary>

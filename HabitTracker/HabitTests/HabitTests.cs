@@ -15,12 +15,12 @@ public sealed class HabitTests
     {
         Habit h = new Habit("Habit");
         
-        Assert.AreEqual(0, h.GetCurrentStreak());
+        Assert.AreEqual(0, h.CurrentStreak);
         
         h.IncrementStreak();
         
-        Assert.AreEqual(1, h.GetCurrentStreak());
-        Assert.AreEqual(1, h.GetLongestStreak());
+        Assert.AreEqual(1, h.CurrentStreak);
+        Assert.AreEqual(1, h.LongestStreak);
     }
 
     /// <summary>
@@ -36,8 +36,8 @@ public sealed class HabitTests
         h.IncrementStreak();
         h.IncrementStreak();
         
-        Assert.AreEqual(2, h.GetCurrentStreak());
-        Assert.AreEqual(2, h.GetLongestStreak());
+        Assert.AreEqual(2, h.CurrentStreak);
+        Assert.AreEqual(2, h.LongestStreak);
     }
 
     /// <summary>
@@ -55,7 +55,7 @@ public sealed class HabitTests
             h.IncrementStreak();
         }
         
-        Assert.AreEqual(1000, h.GetCurrentStreak());
+        Assert.AreEqual(1000, h.CurrentStreak);
     }
 
     /// <summary>
@@ -73,7 +73,7 @@ public sealed class HabitTests
             h.IncrementStreak();
         }
         
-        Assert.AreEqual(10000, h.GetCurrentStreak());
+        Assert.AreEqual(10000, h.CurrentStreak);
     }
 
     /// <summary>
@@ -87,7 +87,7 @@ public sealed class HabitTests
         Habit h = new Habit("Habit");
         
         h.ResetStreak();
-        Assert.AreEqual(0, h.GetCurrentStreak());
+        Assert.AreEqual(0, h.CurrentStreak);
     }
 
     /// <summary>
@@ -101,10 +101,10 @@ public sealed class HabitTests
         Habit h = new Habit("Habit");
         h.IncrementStreak();
         
-        Assert.AreEqual(1, h.GetCurrentStreak());
+        Assert.AreEqual(1, h.CurrentStreak);
         
         h.ResetStreak();
-        Assert.AreEqual(0, h.GetCurrentStreak());
+        Assert.AreEqual(0, h.CurrentStreak);
     }
 
     /// <summary>
@@ -124,8 +124,8 @@ public sealed class HabitTests
         }
         
         h.ResetStreak();
-        Assert.AreEqual(0, h.GetCurrentStreak());
-        Assert.AreEqual(1000, h.GetLongestStreak());
+        Assert.AreEqual(0, h.CurrentStreak);
+        Assert.AreEqual(1000, h.LongestStreak);
     }
 
     /// <summary>
@@ -141,8 +141,8 @@ public sealed class HabitTests
         h.IncrementStreak();
         h.ResetStreak();
         
-        Assert.AreEqual(0, h.GetCurrentStreak());
-        Assert.AreEqual(1, h.GetLongestStreak());
+        Assert.AreEqual(0, h.CurrentStreak);
+        Assert.AreEqual(1, h.LongestStreak);
 
         for (int i = 0; i < 10; i++)
         {
@@ -151,8 +151,8 @@ public sealed class HabitTests
         
         h.ResetStreak();
         
-        Assert.AreEqual(0, h.GetCurrentStreak());
-        Assert.AreEqual(10, h.GetLongestStreak());
+        Assert.AreEqual(0, h.CurrentStreak);
+        Assert.AreEqual(10, h.LongestStreak);
     }
 
     /// <summary>
@@ -165,7 +165,7 @@ public sealed class HabitTests
     {
         Habit h = new Habit("Habit");
         
-        Assert.AreEqual("Habit", h.GetName());
+        Assert.AreEqual("Habit", h.Name);
     }
 
     /// <summary>
@@ -177,7 +177,7 @@ public sealed class HabitTests
     public void GetName_TestGetLongName_ReturnsLongName()
     {
         Habit h = new Habit("Habitsareverygoodforhumanbeingsbecauseithelpsgetthemintoaroutinetodotheirwork");
-        Assert.AreEqual("Habitsareverygoodforhumanbeingsbecauseithelpsgetthemintoaroutinetodotheirwork", h.GetName());
+        Assert.AreEqual("Habitsareverygoodforhumanbeingsbecauseithelpsgetthemintoaroutinetodotheirwork", h.Name);
     }
 
     /// <summary>
@@ -192,8 +192,8 @@ public sealed class HabitTests
         
         h.MarkComplete();
         
-        Assert.AreEqual(1, h.GetCurrentStreak());
-        Assert.AreEqual(1, h.GetLongestStreak());
+        Assert.AreEqual(1, h.CurrentStreak);
+        Assert.AreEqual(1, h.LongestStreak);
         Assert.IsTrue(h.CompletedToday);
         Assert.Contains("2026-07-07", h.CompletionHistory);
         Assert.DoesNotContain("2026-07-05", h.CompletionHistory);
@@ -208,7 +208,7 @@ public sealed class HabitTests
         h.MarkComplete();
         h.MarkComplete();
         
-        Assert.AreEqual(1, h.GetCurrentStreak());
-        Assert.AreEqual(1, h.GetLongestStreak());
+        Assert.AreEqual(1, h.CurrentStreak);
+        Assert.AreEqual(1, h.LongestStreak);
     }
 }

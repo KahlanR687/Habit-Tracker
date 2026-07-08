@@ -9,12 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9bfd70de-70e5-48ea-88c3-de490ed3f92c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Habit/Habit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Habit/Habit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Habit/obj/Debug/net10.0/Habit.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HabitTests/HabitTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/HabitTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HabitTests/obj/Debug/net10.0/HabitTests.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782523781945</updated>
-      <workItem from="1782523782953" duration="6061000" />
+      <workItem from="1782523782953" duration="6365000" />
     </task>
     <task id="LOCAL-00001" summary="Create new HabitTracker solution, Create Habit Class and add basic methods and comments to Habit.cs">
       <option name="closed" value="true" />
@@ -137,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783388845598</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add comments in Habit.cs and HabitTests.cs. Create more tests in HabitTests.cs. Prevent MarkComplete Recurring over multiple days.">
+      <option name="closed" value="true" />
+      <created>1783477303878</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1783477303878</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +155,7 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 2/135" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 98% 2/126" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -166,7 +169,8 @@
     <MESSAGE value="Create HabitTests.cs" />
     <MESSAGE value="change updateStreak to incrementStreak and resetStreak. Add one test to HabitTests.cs" />
     <MESSAGE value="program methods in Habit.cs and add new tests for IncrementStreak in HabitTests.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="program methods in Habit.cs and add new tests for IncrementStreak in HabitTests.cs" />
+    <MESSAGE value="Add comments in Habit.cs and HabitTests.cs. Create more tests in HabitTests.cs. Prevent MarkComplete Recurring over multiple days." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments in Habit.cs and HabitTests.cs. Create more tests in HabitTests.cs. Prevent MarkComplete Recurring over multiple days." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
